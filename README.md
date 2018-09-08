@@ -4,5 +4,5 @@
 
 ## How to Run
 
-    ` javac {fileName}.java `
-    ` java {className} `
+     javac {fileName}.java
+     java {className}
