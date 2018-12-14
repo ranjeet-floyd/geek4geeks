@@ -38,4 +38,4 @@
 36. Given a binary tree check return whether it is a Binary search tree or not.
 37. Given a doubly linked list convert it to a binary tree with head as root and childs in level order spiral form. Input: (Doubly linked list) 1 -> 2 -> 3 ->4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10
 38. Swap nth Element of linked list
-39. Maximum Islands given a matrix with zeros and ones
+39. Maximum Islands given a matrix with zeros and ones  [Link](/random/amazon/NumOfIsland.java)
