@@ -10,8 +10,7 @@ Output : 5
  **/
 
 public class NumOfIsland {
-    static final int ROW = 5;
-    static final int COL = 5;
+    static final int LAND = 1;
     static final int rowNum[] = { -1, -1, -1, 0, 0, 1, 1, 1 };
     static final int colNum[] = { -1, 0, 1, 1, -1, -1, 0, 1 };
 
@@ -28,36 +27,36 @@ public class NumOfIsland {
      * @return
      */
     static int countIslands(int[][] arr) {
+        int ROW = arr.length; //row
+        int COL = arr[0].length; //col
         boolean[][] visited = new boolean[ROW][COL];
-        int countIslands = 0;
+        int countOfIsland = 0;
         for (int i = 0; i < ROW; i++) {
             for (int j = 0; j < COL; j++) {
-                if (isSafe(arr, i, j, visited)) {
-                    DFS(arr, i, j, visited);
-                    countIslands++;
+                if (isSafe(arr, i, j, visited, ROW, COL)) {
+                    DFS(arr, i, j, visited, ROW, COL);
+                    countOfIsland++;
                 }
             }
+        
         }
-        return countIslands;
+
+        return countOfIsland;
     }
 
     /**
      * utility funcation to DFS on 2D array
-     * 
+     * | recursive
      * @param arr
      * @param row
      * @param col
      * @param visited
      */
-    static void DFS(int[][] arr, int row, int col, boolean[][] visited) {
-        System.out.println("Called DFS => row : "+row  + " and col:"+col);
-        // mark visited cell true
-        visited[row][col] = true;
-        // recur for all connected nodes
-        for (int k = 0; k < 8; k++) {
-            // check if safe
-            if (isSafe(arr, row + rowNum[k], col + colNum[k], visited)) {
-                DFS(arr, row + rowNum[k], col + colNum[k], visited);
+    static void DFS(int[][] arr, int row, int col, boolean[][] visited, int ROW, int COL) {
+        if (isSafe(arr, row, col, visited, ROW, COL)) {
+            visited[row][col] = true;
+            for (int k = 0; k < 8; k++) {
+                DFS(arr, row + rowNum[k], col + colNum[k], visited, ROW, COL);
             }
         }
 
@@ -72,9 +71,11 @@ public class NumOfIsland {
      * @param visited
      * @return true if safe
      */
-    static boolean isSafe(int[][] arr, int row, int col, boolean[][] visited) {
-        System.out.println("row : "+ row + " col :" + col);
-        return row < ROW && row >= 0 && col < COL && col >= 0 && arr[row][col] == 1 && !visited[row][col];
+    static boolean isSafe(int[][] arr, int row, int col, boolean[][] visited , int ROW, int COL) {
+       return row >=0 && row < ROW
+       && col >=0  && col < COL
+       && (arr[row][col] == LAND)
+       && !visited[row][col];
 
     }
  }
