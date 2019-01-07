@@ -1,14 +1,14 @@
 # Amazon Practise Questions
 
-1. reverse inorder traversal
+1. reverse inorder traversal [link](/random/amazon/InorderTraversal.java)
 2. Desgin LRU cache
 3. A 9X9 board is given . Need to verify whether its a valid sudoku solution or not.
 4. An input file is given which contains words , they may be repeated. Find the k most repeated words
 5. Design a snake and ladder game.
-6. One array holding heights of building are provided. its raining and there can be water accumulated between free space in buildings. Needed to find the accumulated water quantity. It was said to assume its raining for very long time so consider all free space which can hold water will be filled.
+6. One array holding heights of building are provided. its raining and there can be water accumulated between free space in buildings. Needed to find the accumulated water quantity. It was said to assume its raining for very long time so consider all free space which can hold water will be filled. [link](/random/amazon/RainTap.java)
 7. Provided n ropes with different lengths we are require to join them to form one rope.Joining two ropes with a and b length costs a\*b. We are require to join all ropes with minimum cost possible.
 8. Design and implement an class to provide site hit counters which provides interface to increase counter, get last hour data and get last 10 seconds data.
-9. Two tree are provided check whether one tree can be represented as part of another tree.
+9. Two tree are provided check whether one tree can be represented as part of another tree. (link)[/random/amazon/SubTree.java]
 10. online ticket booking system
 11. Two binary search trees, find if one tree is a part of the other.
 12. print a binary tree in zigzag fashion, starting from node.

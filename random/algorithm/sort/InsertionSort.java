@@ -8,10 +8,9 @@ import java.util.List;
 public class InsertionSort {
     public static void main(String[] args) {
         System.out.println("Hello insertion sort.");
-
         Data[] arr = { new Data(11), new Data(4), new Data(8), new Data(9), new Data(10), new Data(1) };
         sort(arr);
-        // print(arr);
+        print(arr);
 
     }
 
@@ -54,8 +53,6 @@ public class InsertionSort {
     static void sort(Comparable[] a) {
         for (int i = 0; i < a.length; i++) {
             for (int j = i; j > 0; j--) {
-                System.out.println("i : " + i + " and j :" + j);
-                print(a);
                 if (less(a[j], a[j - 1])) {
                     exch(a, j, j - 1);
                 } else

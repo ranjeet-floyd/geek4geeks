@@ -7,6 +7,7 @@ public class Fib {
         System.out.println(fib(150));
     }
 
+    //recurrsion
     static int fib(int n) {
         if (n == 0 || n == 1) {
             return 1;
@@ -15,6 +16,7 @@ public class Fib {
         }
     }
 
+    //dp
     static int fibDP(int n) {
         if (n == 0 || n == 1) {
             return 1;
